@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     fun printCover() {
 //        val inputStream: InputStream = assets.open("cover.pdf")
-        val filePath =  getFileFromAssets(this@MainActivity, "cover.pdf").absolutePath
+        val filePath =  getFileFromAssets(this@MainActivity, "demo.pdf").absolutePath
         val printJob = print(
             "Cover PDF",
             PdfDocumentAdapter(applicationContext, filePath),
