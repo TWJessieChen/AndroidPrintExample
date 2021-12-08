@@ -43,10 +43,17 @@ class MainActivity : AppCompatActivity() {
     fun printCover() {
 //        val inputStream: InputStream = assets.open("cover.pdf")
         val filePath =  getFileFromAssets(this@MainActivity, "demo.pdf").absolutePath
+
+        //針對紙張做設定，紙張格式，紙張橫向直向等等
+        val printAttributesBuilder = PrintAttributes.Builder()
+        printAttributesBuilder
+            .setMediaSize(PrintAttributes.MediaSize.ISO_A4)
+            .setMediaSize(PrintAttributes.MediaSize.UNKNOWN_LANDSCAPE)
+
         val printJob = print(
             "Cover PDF",
             PdfDocumentAdapter(applicationContext, filePath),
-            PrintAttributes.Builder().build()
+            printAttributesBuilder.build()
         )
     }
 
