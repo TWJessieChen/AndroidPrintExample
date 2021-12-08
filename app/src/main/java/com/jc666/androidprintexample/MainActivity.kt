@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     fun printCover() {
 //        val inputStream: InputStream = assets.open("cover.pdf")
-        val filePath =  getFileFromAssets(this@MainActivity, "demo.pdf").absolutePath
+        val filePath =  getFileFromAssets(this@MainActivity, "20211203174708.pdf").absolutePath
 
         //針對紙張做設定，紙張格式，紙張橫向直向等等
         val printAttributesBuilder = PrintAttributes.Builder()
